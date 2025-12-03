@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    background: #f4efe7;
+    font-family: 'Poppins', sans-serif;
+    color: #2d2d2d;
+}
+
+.page {
+    page-break-after: always;
+    break-after: page;
+}
+
+/* COVER PAGE */
+.cover {
+    background: linear-gradient(135deg, #000, #1a1a1a);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #d6a65c;
+    text-align: center;
+}
+
+.logo {
+    width: 260px;
+    height: 250px;
+    margin-bottom: -25px;
+    /* SUBTITLE ko upar kheech lega */
+    margin-top: -20px;
+    /* Logo ke extra top transparent space ko compress karega */
+}
+
+.title {
+    font-family: 'Playfair Display';
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 20px;
+    opacity: 0.8;
+    margin-top: -10px;
+    /* Subtitle ko logo ke bilkul paas laa deta hai */
+    position: relative;
+    top: -20px;
+    /* Slight overlap for premium look */
+}
+
+/* CATEGORY PAGE */
+.category-page {
+    background: #ffffff;
+    padding: 50px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    border-radius: 14px;
+    break-inside: avoid;
+}
+
+/* CATEGORY TITLE */
+.cat-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #b8863b;
+    border-bottom: 3px solid #eadac2;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* GRID LAYOUT */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+/* CARD STYLE */
+.card {
+    background: #fbf8f3;
+    border-radius: 14px;
+    padding: 20px 22px;
+    border: 1px solid #e7dfd2;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card span {
+    font-weight: 600;
+    font-size: 19px;
+    color: #2e2e2e;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.card b {
+    float: right;
+    color: #b8863b;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.card p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #6a6a6a;
+    line-height: 1.4;
+}
+
+/* BACK COVER */
+.back-cover {
+    background: linear-gradient(135deg, #000, #1a1a1a);
+    height: 100vh;
+    color: #d6a65c;
+    text-align: center;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    border: 4px double #c9a15a;
+}
+
+.back-title {
+    font-family: 'Playfair Display';
+    font-size: 42px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.divider {
+    width: 110px;
+    height: 3px;
+    background: #d6a65c;
+    margin: 18px auto;
+    border-radius: 3px;
+}
+
+.resto-line {
+    font-size: 26px;
+    margin-top: 18px;
+    font-weight: 600;
+}
+
+.resto-desc {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(214, 166, 92, 0.3);
+}
+
+.info-box p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer-note {
+    margin-top: 40px;
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+.socials {
+    margin-top: 5px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.qr {
+    width: 140px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+
+@media print {
+
+    /* Allow printing background colors */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body {
+        background: #ffffff !important;
+    }
+
+    .cover {
+        background: linear-gradient(135deg, #000, #1a1a1a) !important;
+        color: #d6a65c !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .page {
+        page-break-after: always !important;
+    }
+
+    .category-page {
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .card {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+}
