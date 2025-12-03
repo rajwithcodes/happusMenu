@@ -1,368 +1,271 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background: #faf7f2;
-  font-family: 'Poppins', sans-serif;
-  color: #1a1a1a;
-  line-height: 1.6;
+    margin: 0;
+    background: #faf7f2;
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
 }
 
 .page {
-  page-break-after: always;
-  break-after: page;
+    page-break-after: always;
+    break-after: page;
 }
 
 /* ========== COVER PAGE ========== */
 .cover {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1c1410 50%, #000000 100%);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #d4af37;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1c1410 50%, #000000 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #d4af37;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .cover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .logo {
-  width: 280px;
-  height: 270px;
-  margin-bottom: -30px;
-  margin-top: -30px;
-  filter: drop-shadow(0 8px 24px rgba(212, 175, 55, 0.3));
-  position: relative;
-  z-index: 1;
+    width: 240px;
+    height: auto;
+    margin-bottom: -10px;
+    margin-top: -20px;
+    filter: drop-shadow(0 6px 18px rgba(212, 175, 55, 0.28));
+    z-index: 1;
 }
 
 .title {
-  font-family: 'Playfair Display', serif;
-  font-size: 58px;
-  letter-spacing: 6px;
-  margin: 0;
-  font-weight: 700;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, #f4e4c1 0%, #d4af37 50%, #b8945f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-  z-index: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    letter-spacing: 5px;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #f4e4c1 0%, #d4af37 50%, #b8945f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 .subtitle {
-  font-size: 22px;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
-  letter-spacing: 3px;
-  opacity: 0.85;
-  margin-top: -8px;
-  position: relative;
-  top: -15px;
-  z-index: 1;
-  color: #e8d7b8;
+    font-size: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    opacity: 0.85;
+    margin-top: -12px;
+    position: relative;
+    z-index: 1;
+    color: #e8d7b8;
 }
 
-/* ========== CATEGORY PAGE ========== */
+/* ========== CATEGORY PAGE (AUTO HEIGHT) ========== */
 .category-page {
-  background: linear-gradient(to bottom, #ffffff 0%, #fdfbf7 100%);
-  padding: 60px 50px;
-  min-height: 100vh;
-  box-sizing: border-box;
-  break-inside: avoid;
-  position: relative;
+    background: linear-gradient(to bottom, #ffffff 0%, #fdfbf7 100%);
+    padding: 50px 45px;
+    min-height: auto;
+    /* 🔥 NO FORCED FULL PAGE */
+    box-sizing: border-box;
+    break-inside: avoid;
+    position: relative;
+    margin-bottom: 40px;
+    /* small bottom margin so page doesn't look empty */
 }
 
 .category-page::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50px;
-  right: 50px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 45px;
+    right: 45px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
 }
 
 /* ========== CATEGORY TITLE ========== */
 .cat-title {
-  text-align: center;
-  font-size: 42px;
-  margin-bottom: 48px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: #2d2416;
-  position: relative;
-  padding-bottom: 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 35px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #2d2416;
+    position: relative;
+    padding-bottom: 18px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .cat-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
 }
 
 .cat-title::before {
-  content: '◆';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #d4af37;
-  font-size: 14px;
+    content: '◆';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d4af37;
+    font-size: 14px;
 }
 
-/* ========== GRID LAYOUT ========== */
+/* ========== GRID ========== */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 32px;
+    /* horizontal + vertical gap */
+    margin-top: 10px;
 }
 
-/* ========== CARD STYLE ========== */
+/* ========== CARD ========== */
 .card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px 26px;
-  border: 1px solid #f0e6d6;
-  box-shadow: 0 4px 20px rgba(45, 36, 22, 0.06);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  page-break-inside: avoid !important;
-  break-inside: avoid !important;
-  position: relative;
-  overflow: hidden;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #d4af37, #b8945f);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px 22px;
+    border: 1px solid #f0e6d6;
+    box-shadow: 0 4px 20px rgba(45, 36, 22, 0.06);
+    transition: all 0.3s ease;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    position: relative;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(45, 36, 22, 0.12);
-  border-color: #e8d7b8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(45, 36, 22, 0.12);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #d4af37, #b8945f);
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .card:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .card span {
-  font-weight: 600;
-  font-size: 20px;
-  color: #2d2416;
-  display: block;
-  margin-bottom: 6px;
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2d2416;
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .card b {
-  float: right;
-  color: #c9a15c;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 0.5px;
+    float: right;
+    color: #c9a15c;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #6b6052;
-  line-height: 1.6;
-  font-weight: 300;
-  letter-spacing: 0.2px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #6b6052;
+    font-weight: 300;
+    line-height: 1.5;
 }
 
 /* ========== BACK COVER ========== */
 .back-cover {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1c1410 50%, #000000 100%);
-  height: 100vh;
-  color: #d4af37;
-  text-align: center;
-  padding: 70px 50px;
-  box-sizing: border-box;
-  border: 6px double #c9a15c;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.back-cover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 40%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 70% 60%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
-  pointer-events: none;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1c1410 50%, #000000 100%);
+    height: 100vh;
+    text-align: center;
+    padding: 60px 40px;
+    color: #d4af37;
+    box-sizing: border-box;
+    border: 6px double #c9a15c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .back-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  margin: 0;
-  letter-spacing: 4px;
-  font-weight: 700;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
+    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 4px;
+    margin: 0;
+    font-weight: 700;
 }
 
 .divider {
-  width: 140px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
-  margin: 24px auto;
-  border-radius: 3px;
-  position: relative;
-  z-index: 1;
-}
-
-.resto-line {
-  font-size: 28px;
-  margin-top: 24px;
-  font-weight: 600;
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: 1px;
-  position: relative;
-  z-index: 1;
-}
-
-.resto-desc {
-  font-size: 17px;
-  opacity: 0.85;
-  margin-bottom: 36px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 1;
+    width: 120px;
+    height: 3px;
+    margin: 24px auto;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
 }
 
 .info-box {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-  padding: 28px 32px;
-  width: 65%;
-  margin: auto;
-  border-radius: 14px;
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  position: relative;
-  z-index: 1;
-}
-
-.info-box p {
-  margin: 12px 0;
-  font-size: 17px;
-  font-weight: 400;
-  letter-spacing: 0.3px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 26px 30px;
+    width: 65%;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    backdrop-filter: blur(8px);
+    margin-top: 20px;
 }
 
 .footer-note {
-  margin-top: 48px;
-  font-size: 18px;
-  opacity: 0.9;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  position: relative;
-  z-index: 1;
+    margin-top: 40px;
+    font-size: 18px;
+    opacity: 0.85;
 }
 
-.socials {
-  margin-top: 8px;
-  font-size: 16px;
-  opacity: 0.8;
-  font-weight: 300;
-  position: relative;
-  z-index: 1;
-}
-
-.qr {
-  width: 150px;
-  margin-top: 36px;
-  border-radius: 12px;
-  border: 3px solid #d4af37;
-  padding: 8px;
-  background: white;
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
-  position: relative;
-  z-index: 1;
-}
-
-/* ========== PRINT STYLES ========== */
+/* PRINT */
 @media print {
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
+    * {
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
 
-  body {
-    background: #ffffff !important;
-  }
+    body {
+        background: white !important;
+    }
 
-  .cover,
-  .back-cover {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1c1410 50%, #000000 100%) !important;
-    color: #d4af37 !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
+    .category-page {
+        margin-bottom: 20px !important;
+    }
 
-  .page {
-    page-break-after: always !important;
-  }
-
-  .category-page {
-    box-shadow: none !important;
-  }
-
-  .card {
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-  }
+    .grid {
+        gap: 20px !important;
+    }
 }
